@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <section id="separateBox">
+            <div class="backgroundColor" id="inventory">
+                <p id="slot"></p>
+                <p><img class="pitite1" src="spider.gif" alt=""></p>
+                <p><img class="pitite2" src="spider.gif" alt=""></p>
+            </div>
+            <div class="backgroundColor" id="player">
+                <span id="hero">Gandalf</span>
+                <div class="healthbar">
+                    <span>xx</span>
+                    <span></span>
+                </div>
+                <div><img src="Trex.gif" alt=""></div>
+            </div>
+            <div class="backgroundColor" id="enemy">
+                <span id="monster">xx</span>
+                <div class="healthbar">
+                    <span>xx</span>
+                    <span></span>
+                </div>
+                <div id="monsterImg">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="backgroundColor" id="Skill">
+                <button onclick="swapSkill()">Player Skill</button>
+                <button onclick="enemySkill()">Enemy Skill</button>
+                <h3></h3>
+                <p></p>
+            </div>
+        </section>
+        <section id="actionUI">
+            <div class="backgroundColor">
+                <h2>Actions :</h2>
+                <div id="combatUI">
+                    <button onclick="takePotion(0)">Take small potion 🍸</button>
+                    <button onclick="takePotion(1)">Take big potion 🍺</button>
+                    <button onclick="attackLuckyStrike()">Lucky Strike ! 🌠</button>
+                    <button onclick="attackWithSword()">Sword attack ⚔️</button>
+                    <button onclick="fireball()">Fireball 🔥</button>
+                    <button onclick="drainLife()">Drain Life 👩‍🦽</button>
+                    <button onclick="strengthBuff()">Strength buff 💪</button>
+                    <button onclick="takePotion(2)">Take Berserk potion ☕ </button>
+                    <button onclick="swapEnemy()"> Next Enemy 👀</button>
+                    <button onclick="restoration()">Reset ⚕️</button>
+                    <button onclick="eatingMeat()">Eating monster meat 🍖</button>
+                </div>
+            </div>
+            <div class="backgroundColor">
+                <h3>Combat log</h3>
+                <p id="spam"></p>
+            </div>
+        </section>
+        <footer>
+            <a href="patch-note.html">
+                <h4>Patch-note</h4>
+            </a>
+        </footer>
+    </main>
+    <script src="script.js" async></script>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+body {
+    /*background: url(https://cdn.pixabay.com/photo/2019/08/06/15/50/fantasy-4388628_960_720.jpg)no-repeat center/100%;*/
+    background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1f43d5b0-2dc2-4600-a801-2e246e33b5b2/dbj1jb5-0a71cc5b-f09e-45ef-8e57-0cef4f23e8e8.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzFmNDNkNWIwLTJkYzItNDYwMC1hODAxLTJlMjQ2ZTMzYjViMlwvZGJqMWpiNS0wYTcxY2M1Yi1mMDllLTQ1ZWYtOGU1Ny0wY2VmNGYyM2U4ZTguZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.jZH1njWY85lX_18XSiX6bR9lxCI_zKOanJIJHqt9MKo)no-repeat center/100%;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  main section:first-child{
+    display: flex;
+    justify-content: space-between;
+    margin:3% 5% 3%;
+    gap: 3%;
+  }
+  #separateBox div{
+    width: 90%;
+  }
+
+
+  #enemy, #player{
+    display: flex;
+    flex-direction: column;
+    font-size: 200px;
+    align-items: center;
+    text-align: center;
+  }
+
+  #hero,
+  #monster{
+    display:flex;
+    font-size: 50px;
+    justify-content:center;
+  }
+  
+  
+  .healthbar{
+    display:flex;
+    background:black;
+    font-size: 40px;
+    border-radius: 10px;
+  
+  }
+  .healthbar span{
+    display:flex;
+    border-radius: 10px;
+    max-width:100%;
+    padding: 5px;
+    transition: width 1s;
+  
+  }
+  .dmgDeal{
+    color:red;
+    opacity: 0;
+    animation: fade 2s linear;
+    transform: scale(1.5);
+  }
+  .heal{
+    color:green;
+    opacity: 0;
+    animation: fade 2s linear;
+    transform: scale(1.5);
+  }
+  #enemy .healthbar span:last-child{
+    position:absolute;
+    right: 18%;
+    top: 21%;
+  }
+  #player .healthbar span:last-child{
+    position:absolute;
+    right: 18%;
+    top: 21%;
+  }
+  @keyframes fade {
+    0%,100% { opacity: 0 }
+    25%,50%,75% { opacity: 1 }
+  }
+  
+  .red{
+    background: red;
+  }
+  
+  h2{
+    text-align: center;
+  }
+  .backgroundColor{
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background-color: hsl(0 0% 0% / 0.5);
+  }
+  #actionUI{
+    display: flex;
+    gap: 10%;
+    justify-content: space-between;
+    margin: 0% 10%;
+  }
+  #combatUI{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #combatUI button{
+    border-radius: 5px;
+  }
+  div button {
+    margin: 0% 1%;
+    width: 45%;
+    height: 50px;
+  }
+  #inventory{
+    max-width: 100%;
+    color: wheat;
+    padding: 10px;
+  }
+  #spam{
+    width:750px;
+    max-width: 100%;
+    height: 300px;
+    overflow-y:scroll;
+    scrollbar-width: thin;
+    margin: 0;
+  }
+  
+  button:hover{
+    font-size: 18px;
+    background-color:lightgrey;
+    transition: .2s;
+    cursor:pointer;
+  }
+  
+  .playerAttack {
+    position: relative;
+    -webkit-animation: linear;
+    -webkit-animation-name: playerAttack;
+    -webkit-animation-duration: .5s;
+  }
+
+  @-webkit-keyframes playerAttack {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  .monsterAttack {
+    position: relative;
+    animation: linear;
+    animation-name: monsterAttack;
+    animation-duration: .5s;
+  }
+  .hitReceived {
+    animation: hitEffect 1s;
+  }
+
+  @keyframes hitEffect {
+    0%,40%,70%,100% { opacity: 1 }
+    55%,85% { opacity: 0 }
+  }
+
+  @-webkit-keyframes monsterAttack {
+    0% {
+      right: 0;
+    }
+    100% {
+      right: 100%;
+    }
+  }
+
+  footer{
+    position: absolute;
+    top: 93%;
+    background-color: black;
+    width: 200px;
+    height: 60px;;
+  }
+
+  #Skill{
+    overflow-y:scroll;
+    scrollbar-width: thin;
+  }
+  #Skill button{
+    position: relative;
+    border-radius: 10px;
+  }
+  img{
+    height: 350px;
+    width: 100%;
+  }
+  .pitite1{
+    position: absolute;
+    top: 50%;
+    left: -20%;
+    width: 100px;
+    height: 100px;
+    animation: spiderman 5s linear infinite;
+  }
+  .pitite2{
+    position: absolute;
+    top: 96%;
+    width: 100px;
+    height: 100px;
+    animation: spidermanLTR 15s linear infinite;
+    transform: rotate(270deg);
+  }
+  @keyframes spidermanLTR {
+    0% {
+      left: 410%;
+    }
+    100% {
+      left: -20%;
+    }
+  }
+  @keyframes spiderman {
+    0% {
+      top: 170%;
+    }
+    100% {
+      top: -20%;
+    }
+  }
