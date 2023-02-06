@@ -18,8 +18,8 @@ let nbBerserkPotion = 3;
 let potionStock = "Potion stock : <br>"
 let money = 0;
 let monsterKilled = 0;
-let bossKilled = 0;
-let encounterBeforeBoss = 0;
+let bossKilled = 2;
+let encounterBeforeBoss = 4;
 let mageKillerStack = 0;
 let drop
 let meat = 0;
@@ -86,26 +86,26 @@ let chat = 0
 function monsterAuPif() {
     document.querySelector("#monster").innerHTML = enemyName;
     if (enemyName == "Big rat") {
-        document.querySelector("#monsterImg img").src = "rat.gif"
+        document.querySelector("#monsterImg img").src = "./img/rat.gif"
         document.querySelector("#monsterImg img").style.transform = "scaleX(1)";
     } else if (enemyName == "Magic Beast") {
         if( chat > 0){
-        document.querySelector("#monsterImg img").src = "the-cat.gif"
+        document.querySelector("#monsterImg img").src = "./img/the-cat.gif"
         document.querySelector("#monsterImg img").style.transform = "scaleX(1)";
         chat--
         } else {
-            document.querySelector("#monsterImg img").src = "doggo.gif"
+            document.querySelector("#monsterImg img").src = "./img/doggo.gif"
             document.querySelector("#monsterImg img").style.transform = "scaleX(1)";
             chat++
         }
     } else if (enemyName == "Oni") {
-        document.querySelector("#monsterImg img").src = "oni.gif"
+        document.querySelector("#monsterImg img").src = "./img/oni.gif"
         document.querySelector("#monsterImg img").style.transform = "scaleX(-1)";
     } else if (enemyName == "Ent") {
-        document.querySelector("#monsterImg img").src = "walkingtree.gif"
+        document.querySelector("#monsterImg img").src = "./img/walkingtree.gif"
         document.querySelector("#monsterImg img").style.transform = "scaleX(1)";
     } else {
-        document.querySelector("#monsterImg img").src = "kobold.gif"
+        document.querySelector("#monsterImg img").src = "./img/kobold.gif"
         document.querySelector("#monsterImg img").style.transform = "scaleX(1)";
     }
     buttonDisable[8].disabled = true;
@@ -119,27 +119,27 @@ function bossEncouter() {
 function bossRandomizer() {
     document.querySelector("#monster").innerHTML = bossEnemyName;
     if (bossEnemyName == "Dark Elf") {
-        document.querySelector("#monsterImg img").src = "Darkelf.gif"
+        document.querySelector("#monsterImg img").src = "./img/Darkelf.gif"
         document.querySelector("#monsterImg img").style.transform = "scaleX(-1)";
         enemyLife = 500
         maxEnemyLife = enemyLife
     } else if (bossEnemyName == "Medusa") {
-        document.querySelector("#monsterImg img").src = "medusa.gif"
+        document.querySelector("#monsterImg img").src = "./img/medusa.gif"
         document.querySelector("#monsterImg img").style.transform = "scaleX(1)";
         enemyLife = 550
         maxEnemyLife = enemyLife
     } else if (bossEnemyName == "draugr") {
-        document.querySelector("#monsterImg img").src = "draugr.gif"
+        document.querySelector("#monsterImg img").src = "./img/draugr.gif"
         document.querySelector("#monsterImg img").style.transform = "scaleX(1)";
         enemyLife = 500
         maxEnemyLife = enemyLife
     } else if (bossEnemyName == "Necromancer") {
-        document.querySelector("#monsterImg img").src = "necro.jpg"
+        document.querySelector("#monsterImg img").src = "./img/necro.jpg"
         document.querySelector("#monsterImg img").style.transform = "scaleX(1)";
         enemyLife = 400
         maxEnemyLife = enemyLife
     } else {
-        document.querySelector("#monsterImg img").src = "knight.gif"
+        document.querySelector("#monsterImg img").src = "./img/knight.gif"
         document.querySelector("#monsterImg img").style.transform = "scaleX(1)";
         enemyLife = 350
         maxEnemyLife = enemyLife
